@@ -9,7 +9,7 @@ export default function Welcome() {
         navigate("/");
     };
 
-    const [, setCookie] = useCookies([]);
+    const [, setCookie] = useCookies<string>([]);
     setCookie("first_visit", "false", {path: "/", sameSite: true});
 
     return (

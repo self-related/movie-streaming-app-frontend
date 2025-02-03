@@ -3,9 +3,10 @@ import "./NavBarTop.css";
 import { useEffect, useState } from "react";
 import SearchIcon from "../assets/icons/search.svg";
 import BellIcon from "../assets/icons/bell.svg";
+import { UserData } from "../types";
 
 export default function NavBarTop() {
-    const [userData, setUserData] = useState(null);
+    const [userData, setUserData] = useState<UserData | null>(null);
 
     useEffect(() => {
         // временная заглушка с данными
@@ -20,9 +21,9 @@ export default function NavBarTop() {
 
             {/* левая часть панели */}
             <div className="navbar_top__wrapper">
-                <Link className="navbar_top__link">Movies</Link>
-                <Link className="navbar_top__link">Series</Link>
-                <Link className="navbar_top__link">Documentaries</Link>
+                <Link className="navbar_top__link" to="/">Movies</Link>
+                <Link className="navbar_top__link" to="/">Series</Link>
+                <Link className="navbar_top__link" to="/">Documentaries</Link>
             </div>
 
             {/* правая часть панели */}

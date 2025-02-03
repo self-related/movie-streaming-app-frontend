@@ -20,7 +20,7 @@ export default function Home() {
     const [trendingMovies, setTrendingMovies] = useState(null);
     const [continueMovies, setContinueMovies] = useState(null);
 
-    const [cookies] = useCookies([]);
+    const [cookies] = useCookies<string>([]);
     const navigate = useNavigate();
 
 

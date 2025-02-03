@@ -5,14 +5,21 @@ import LikeIcon from "../assets/icons/heart.svg";
 import LikeIconPressed from "../assets/icons/like-icon-pressed.svg";
 import { handleLikeClick } from "../utils";
 
+// type imports
+import { Movie, MovieInfo } from "../types";
 
+// props type
+interface GalleryProps {
+    movies: Movie[] | null,
+    large?: boolean
+}
 
-export default function Gallery({movies, large}) {
+export default function Gallery({movies, large}: GalleryProps) {
     const thumbnailType = large ? "large" : "compact"; // аттрибут для широких/узких превью
     
     const [clickedMovie, setClickedMovie] = useClickedMovieContext();
 
-    const handleThumbnailClick = (id, image, info) => (event) => {
+    const handleThumbnailClick = (id: number, image: string, info: MovieInfo) => (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 
         // закрыть инфоблок, если повторный клик
         if (id === clickedMovie?.id) {

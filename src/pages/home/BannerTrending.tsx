@@ -2,7 +2,7 @@ import "./BannerTrending.css";
 import HeartIcon from "../../assets/icons/heart.svg";
 import { handleLikeClick } from "../../utils";
 
-export default function BannerTrending({trendingMovie}) {
+export default function BannerTrending({trendingMovie}: any ) { // оставлю any, т.к. для баннера объект пока отличается  
     // статическая заглушка для баннера
     const {name: movieName, image: movieImage, ...movieInfo} = trendingMovie;
 

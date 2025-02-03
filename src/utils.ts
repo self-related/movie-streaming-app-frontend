@@ -1,4 +1,4 @@
-export const getDurationString = (minutes) => {
+export const getDurationString = (minutes: number) => {
     const hours = Math.floor(minutes / 60);
     if (hours === 0) {
         return `${minutes}m`;
@@ -10,15 +10,15 @@ export const getDurationString = (minutes) => {
     }
 };
 
-export const getShortDescription = (string) => {
-    if (string.length > 200) {
-        string = string.split("").slice(0, 199).join("");
-        return string.trim() + "...";
+export const getShortDescription = (description: string) => {
+    if (description.length > 200) {
+        description = description.split("").slice(0, 199).join("");
+        return description.trim() + "...";
     }
-    return string;
+    return description;
 };
 
-export const handleLikeClick = (event) => {
+export const handleLikeClick = (event: React.MouseEvent) => {
     event.stopPropagation();
     alert("Нет бэка чтобы изменить лайк");
 };
