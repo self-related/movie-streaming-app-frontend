@@ -4,14 +4,16 @@ import NavBarLeft from './components/NavBarLeft';
 import NavBarTop from './components/NavBarTop';
 import { createContext, useContext, useState } from 'react';
 import DetailedInfo from './components/DetailedInfo';
+import { Movie } from './types';
 
-const ClickedMovieContext = createContext({});
+// в контексте передается [clickedMovie, setClickedMovie]
+const ClickedMovieContext = createContext<[Movie | null, React.Dispatch<React.SetStateAction<Movie | null>> | null]>([null, null]);
 
 export const useClickedMovieContext = () => useContext(ClickedMovieContext); // сразу получить контекст через хук
 
 function App() {
 
-    const [clickedMovie, setClickedMovie] = useState(null);
+    const [clickedMovie, setClickedMovie] = useState<Movie | null>(null);
 
   return (
     <>

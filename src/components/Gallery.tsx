@@ -23,16 +23,15 @@ export default function Gallery({movies, large}: GalleryProps) {
 
         // закрыть инфоблок, если повторный клик
         if (id === clickedMovie?.id) {
-            setClickedMovie(null);
+            setClickedMovie!(null);
             return;
         }
 
-        setClickedMovie({
+        setClickedMovie!({
             id,
             image,
             info,
-            detailedDescription: "TEST",
-            element: event.target // чтобы использовать в useEffect
+            element: event.target as EventTarget & HTMLDivElement // чтобы использовать в useEffect
         });
 
     };
@@ -46,7 +45,7 @@ export default function Gallery({movies, large}: GalleryProps) {
         }
 
         // получить координаты картинки превью
-        const coords = clickedMovie.element.getBoundingClientRect();
+        const coords = clickedMovie!.element!.getBoundingClientRect();
 
         // проскроллить до верхушки превью
         scrollBy({

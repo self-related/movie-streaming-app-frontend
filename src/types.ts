@@ -11,7 +11,8 @@ export interface MovieInfo {
 export interface Movie {
     id: number,
     info: MovieInfo,
-    image: string
+    image: string,
+    element?: EventTarget & HTMLDivElement
 }
 
 export interface UserData {

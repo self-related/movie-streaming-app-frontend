@@ -11,7 +11,7 @@ export default function DetailedInfo() {
 
     
     const handleCloseDetailedPreview = () => {
-        setClickedMovie(null);
+        setClickedMovie!(null);
     };
 
     return clickedMovie
