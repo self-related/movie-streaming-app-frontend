@@ -1,7 +1,7 @@
 # movie-streaming-app-frontend
 Фронтенд к сервису стриминга фильмов по [данному Figma-дизайну.](https://www.figma.com/community/file/1242483387238547726/movie-streaming-web-app-ui)
 # Деплой
-https://movie-streaming-app-frontend-henna.vercel.app/
+https://movie-streaming-app-frontend-lilac.vercel.app
 
 # Скрины
 
